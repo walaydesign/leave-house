@@ -21,11 +21,11 @@
     <header class="header d-sm-block d-none">
         <nav class="header_nav">
             <ul class="d-flex align-items-center justify-content-center">
-                <li class="header_item" data-target="#airport">淳萃生活</li>
-                <li class="header_item" data-target="#core">地段位置</li>
-                <li class="header_item" data-target="#sweetlife">交通優勢</li>
-                <li class="header_item" data-target="#building">生活機能</li>
-                <li class="header_item" data-target="#arrange">建築美學</li>
+                <li class="header_item" data-target="#aesthetics">淳萃生活</li>
+                <li class="header_item" data-target="#technology">地段位置</li>
+                <li class="header_item" data-target="#transport">交通優勢</li>
+                <li class="header_item" data-target="#map">生活機能</li>
+                <li class="header_item" data-target="#architecture">建築美學</li>
             </ul>
         </nav>
     </header>
@@ -67,11 +67,15 @@
             <img class="leave kv_leave-1" src="./public/img/leave-1.webp" alt="">
             <img class="leave kv_leave-2" src="./public/img/leave-2.webp" alt="">
             <img class="leave kv_leave-3 d-lg-block d-none" src="./public/img/leave-3.webp" alt="">
-            <img class="leave kv_leave-4" src="./public/img/leave-13.webp" alt="">
-            <img class="leave kv_leave-5 " src="./public/img/leave-14.webp" alt="">
+            <img class="leave kv_leave-4 d-lg-none" src="./public/img/leave-13.webp" alt="">
+            <img class="leave kv_leave-5 d-lg-none" src="./public/img/leave-14.webp" alt="">
         </div>
 
-        <div class="aesthetics">
+        <div class="aesthetics" id="aesthetics">
+            <img class="leave aesthetics_leave-1 d-lg-none" src="./public/img/leave-26.webp" alt="">
+            <img class="leave aesthetics_leave-2 d-lg-none" src="./public/img/leave-27.webp" alt="">
+            <img class="leave aesthetics_leave-3 d-lg-none" src="./public/img/leave-28.webp" alt="">
+            <img class="leave aesthetics_leave-4 d-lg-none" src="./public/img/leave-29.webp" alt="">
             <div class="container">
                 <div class="d-lg-none">
                     <ul class="title-wrap justify-content-center" data-aos="fade-up" data-aos-duration="1000">
@@ -123,13 +127,13 @@
                     <h4 class="title-en">Building Aesthetics</h4>
                 </div>
                 <p class="text-common" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    建築外觀運用深淺錯落的幾何線條，搭配低調沉穩的色彩配置，使建築彷彿與湖畔景致相互映襯，展現內斂卻不失細節的立面設計。<br>
+                    建築外觀運用深淺錯落的幾何線條，搭配低調沉穩的色彩配置，使建築彷彿與湖畔景致相互映襯，展現內斂卻不失細節的立面設計。<br class="d-lg-block d-none">
                     大片玻璃窗與陽台設計，將湖景與綠意引入室內，讓住戶能夠隨時感受光影與水面的交錯變化享受四季流轉的自然美學。
                 </p>
             </div>
         </div>
 
-        <div class="technology">
+        <div class="technology" id="technology">
             <img class="w-100 d-lg-block d-none" src="./public/img/technology-pic.webp" alt="">
             <img class="w-100 d-lg-none" src="./public/img/technology-bg-m.webp" alt="">
             <div class="technology_text">
@@ -161,7 +165,7 @@
             <img class="leave technology_leave-3 d-lg-none" src="./public/img/leave-15.webp" alt="">
         </div>
 
-        <div class="feat text-right transport">
+        <div class="feat text-right transport" id="transport">
             <img class="leave transport_leave-1 d-lg-block d-none" src="./public/img/leave-7.webp" alt="">
             <img class="leave transport_leave-2 d-lg-none" src="./public/img/leave-16.webp" alt="">
             <img class="leave transport_leave-3 d-lg-none" src="./public/img/leave-17.webp" alt="">
@@ -184,9 +188,9 @@
                     </div>
                     <h3 class="title-main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">交通路網連結八方</h3>
                     <p class="text-common" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        1分鐘上66快速道路，連接東西<br>
-                        國道1號、高鐵南路，串聯南北<br>
-                        20分鐘青埔高鐵，高速城市之旅
+                        <span class="row-1">1分鐘上66快速道路，連接東西</span><br>
+                        <span class="row-2">國道1號、高鐵南路，串聯南北</span><br>
+                        <span class="row-3">20分鐘青埔高鐵，高速城市之旅</span><span class="d-lg-none">。</span>
                     </p>
                     <div class="title-deco w-100 d-lg-flex d-none">
                         <div class="title-deco_circle"></div>
@@ -305,7 +309,7 @@
             </div>
         </div>
 
-        <div class="architecture">
+        <div class="architecture" id="architecture">
             <div class="container d-lg-flex align-items-end">
                 <div class="architecture_text">
                     <div class="title-en-wrap d-lg-block d-none" data-aos="fade-up" data-aos-duration="1000">
@@ -327,25 +331,25 @@
                         <h4 class="title-en d-lg-none">Architecture</h4>
                         <img class="leave architecture_leave-4 d-lg-none" src="./public/img/leave-20.webp" alt="">
                     </div>
-                    <div class="mb-lg-5 mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="d-flex align-items-center mb-3">
+                    <div class="mb-lg-5 mb-3 architecture_promise" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="d-flex align-items-center mb-lg-3 mb-2">
                             <h3 class="title-main">職人保證</h3>
                             <p class="architecture_tag">10年防水保固</p>
                         </div>
                         <p class="text-common">
-                            從鋼筋、板模、水電到灌漿，從細節到大結構<br>
-                            每一步都秉持最高標準，層層把關，嚴謹施工<br>
-                            因為對品質的執著，才成就口碑傳世的經典建築。
+                            <span class="row-1">從鋼筋、板模、水電到灌漿，從細節到大結構</span><br>
+                            <span class="row-2">每一步都秉持最高標準，層層把關，嚴謹施工</span><br>
+                            <span class="row-3">因為對品質的執著，才成就口碑傳世的經典建築。</span>
                         </p>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="d-flex align-items-center">
+                    <div class="architecture_spirit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="d-flex align-items-center mb-lg-3 mb-2">
                             <h3 class="title-main">職人精神</h3>
                             <p class="architecture_tag">一磚一瓦精雕細琢</p>
                         </div>
                         <p class="text-common">
-                            匠心築家,細節至上,RC18公分樓板,每一寸空間<br>
-                            皆用心淬鍊。實踐品質承諾,打造歷久彌新的美好生活。
+                            <span class="row-1">匠心築家,細節至上,RC18公分樓板,每一寸空間</span><br>
+                            <span class="row-2">皆用心淬鍊。實踐品質承諾,打造歷久彌新的美好生活。</span>
                         </p>
                     </div>
                 </div>
@@ -390,7 +394,7 @@
             <img class="leave architecture_leave-3 d-lg-none" src="./public/img/leave-19.webp" alt="">
         </div>
 
-        <div class="map">
+        <div class="map" id="map">
             <img class="leave map_leave-1 d-lg-block d-none" src="./public/img/leave-11.webp" alt="">
             <img class="leave map_leave-2 d-lg-block d-none" src="./public/img/leave-12.webp" alt="">
             <img class="leave map_leave-3 d-lg-none" src="./public/img/leave-21.webp" alt="">
@@ -434,7 +438,7 @@
                 </div>
                 <div class="map_pic">
                     <img class="d-lg-block d-none" src="./public/img/map.webp" alt="">
-                    <img class="d-lg-none" src="./public/img/map-m.webp" alt="">
+                    <img class="d-lg-none map_pic_img" src="./public/img/map-m.webp" alt="">
                 </div>
                 <p class="map_slogan d-lg-none" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     科技菁英<strong>宜居首選</strong><br>
@@ -558,6 +562,10 @@
                 </a>
             </li>
         </ul>
+    </div>
+
+    <div class="map-popup">
+        <img class="map-popup_img" src="./public/img/map-m.webp" alt="">
     </div>
 
 

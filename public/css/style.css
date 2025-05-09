@@ -98,8 +98,8 @@ img {
 }
 
 .swiper-button-prev svg {
-  -webkit-transform: translateX(-2px);
-          transform: translateX(-2px);
+  -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
 }
 
 .swiper-button-next svg {
@@ -652,6 +652,7 @@ img {
 
 .aesthetics {
   padding: 80px 0;
+  position: relative;
 }
 
 .aesthetics_item {
@@ -687,7 +688,35 @@ img {
   width: calc(100% - 512px - 590px - 40px);
 }
 
+.aesthetics_leave-1 {
+  width: 21.67vw;
+  top: 2.2vw;
+  left: -8.33vw;
+}
+
+.aesthetics_leave-2 {
+  width: 20.56vw;
+  bottom: 19.44vw;
+  left: -4.72vw;
+}
+
+.aesthetics_leave-3 {
+  width: 81.95vw;
+  right: 0;
+  bottom: 0;
+}
+
+.aesthetics_leave-4 {
+  width: 13.61vw;
+  top: 51.39vw;
+  right: -8.06vw;
+}
+
 @media screen and (max-width: 991px) {
+  .aesthetics {
+    padding-bottom: 45vw;
+    padding-top: 25vw;
+  }
   .aesthetics_item .remark {
     right: 5px;
     bottom: 5px;
@@ -881,6 +910,12 @@ img {
     margin-bottom: 14px;
     font-size: 22px;
   }
+  .feat_text .title-big, .feat_text .title-main {
+    letter-spacing: 0.15em;
+  }
+  .feat_text .text-common {
+    line-height: 1.6 !important;
+  }
 }
 
 .transport {
@@ -897,6 +932,19 @@ img {
 
 .transport .text-common {
   margin-bottom: 70px;
+  line-height: 2;
+}
+
+.transport .text-common .row-1 {
+  letter-spacing: 0.5em;
+}
+
+.transport .text-common .row-2 {
+  letter-spacing: 0.54em;
+}
+
+.transport .text-common .row-3 {
+  letter-spacing: 0.46em;
 }
 
 .transport .remark {
@@ -933,6 +981,13 @@ img {
   }
   .transport .text-common {
     margin-bottom: 25px;
+    width: 80%;
+  }
+  .transport .text-common br {
+    display: none;
+  }
+  .transport .text-common span {
+    letter-spacing: 0em !important;
   }
   .transport .feat_text {
     padding-bottom: 0;
@@ -1146,6 +1201,10 @@ img {
   color: #0E6140;
 }
 
+.architecture_text .title .text-common {
+  line-height: 2;
+}
+
 .architecture_pic {
   width: 45%;
 }
@@ -1218,6 +1277,26 @@ img {
           transform: translateY(-50%);
 }
 
+.architecture_promise .text-common .row-1 {
+  letter-spacing: 0.1em;
+}
+
+.architecture_promise .text-common .row-2 {
+  letter-spacing: 0.1em;
+}
+
+.architecture_promise .text-common .row-3 {
+  letter-spacing: 0em;
+}
+
+.architecture_spirit .text-common .row-1 {
+  letter-spacing: 0.12em;
+}
+
+.architecture_spirit .text-common .row-2 {
+  letter-spacing: 0em;
+}
+
 @media screen and (max-width: 991px) {
   .architecture {
     padding-bottom: 65px;
@@ -1250,6 +1329,14 @@ img {
   .architecture_text .title-main {
     margin: 0;
     font-size: 16px;
+  }
+  .architecture_text .text-common {
+    letter-spacing: 0.05em !important;
+    line-height: 1.6 !important;
+    width: 90%;
+  }
+  .architecture_text .text-common br {
+    display: none;
   }
   .architecture_pic {
     width: 100%;
@@ -1404,14 +1491,38 @@ img {
 
 .map_leave-3 {
   width: 16.67vw;
-  right: 6.39vw;
-  top: -6.95vw;
+  right: 12.39vw;
+  top: -4.95vw;
 }
 
 .map_leave-4 {
   width: 39.89vw;
   left: 0;
   bottom: -18vw;
+}
+
+.map-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+.map-popup img {
+  width: 100%;
 }
 
 @media screen and (max-width: 991px) {
@@ -1427,12 +1538,15 @@ img {
   .map_text .title-main .num {
     width: 26px;
     height: 26px;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     line-height: 28px;
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
     margin: 0 5px;
+  }
+  .map_text .title-big {
+    margin-bottom: 0;
   }
   .map_title {
     margin-bottom: 5px;
@@ -1816,6 +1930,7 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-bottom: 5px;
   }
   .footer_inform_list > li p.footer_inform_title {
     font-size: 14px;

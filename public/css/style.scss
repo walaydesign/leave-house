@@ -90,7 +90,7 @@ img {
         }
         &-prev {
             svg {
-                transform: translateX(-2px);
+                transform: translateX(-3px);
             }
         }
         &-next {
@@ -576,6 +576,7 @@ img {
 
 .aesthetics {
     padding: 80px 0;
+    position: relative;
     &_item {
         position: relative;
         width: 100%;
@@ -605,7 +606,31 @@ img {
     .title-deco {
         width: calc(100% - 512px - 590px - 40px);
     }
+    &_leave {
+        &-1 {
+            width: 21.67vw;
+            top: 2.2vw;
+            left: -8.33vw;
+        }
+        &-2 {
+            width: 20.56vw;
+            bottom: 19.44vw;
+            left: -4.72vw;
+        }
+        &-3 {
+            width: 81.95vw;
+            right: 0;
+            bottom: 0;
+        }
+        &-4 {
+            width: 13.61vw;
+            top: 51.39vw;
+            right: -8.06vw;
+        }
+    }
     @media screen and (max-width: 991px) {
+        padding-bottom: 45vw;
+        padding-top: 25vw;
         &_item {
             .remark {
                 right: 5px;
@@ -794,6 +819,12 @@ img {
                     margin-bottom: 14px;
                     font-size: 22px;
                 }
+                &-big, &-main {
+                    letter-spacing: 0.15em;
+                }
+            }
+            .text-common {
+                line-height: 1.6 !important;
             }
         }
         
@@ -814,6 +845,18 @@ img {
     .text {
         &-common {
             margin-bottom: 70px;
+            line-height: 2;
+            .row {
+                &-1 {
+                    letter-spacing: 0.5em;
+                }
+                &-2 {
+                    letter-spacing: 0.54em;
+                }
+                &-3 {
+                    letter-spacing: 0.46em;
+                }
+            }
         }
     }
     .remark {
@@ -846,6 +889,13 @@ img {
         .text {
             &-common {
                 margin-bottom: 25px;
+                width: 80%;
+                br {
+                    display: none;
+                }
+                span {
+                    letter-spacing: 0em !important;
+                }
             }
         }
         .feat_text {
@@ -1027,6 +1077,9 @@ img {
             &-main {
                 color: $secondary-500;
             }
+            .text-common {
+                line-height: 2;
+            }
         }
     }
     &_pic {
@@ -1089,6 +1142,33 @@ img {
             transform: translateY(-50%);
         }
     }
+    &_promise {
+        .text-common {
+            .row {
+                &-1 {
+                    letter-spacing: 0.1em;
+                }
+                &-2 {
+                    letter-spacing: 0.1em;
+                }
+                &-3 {
+                    letter-spacing: 0em;
+                }
+            }
+        }
+    }
+    &_spirit {
+        .text-common {
+            .row {
+                &-1 {
+                    letter-spacing: 0.12em;
+                }
+                &-2 {
+                    letter-spacing: 0em;
+                }
+            }
+        }
+    }
     @media screen and (max-width: 991px) {
         padding-bottom: 65px;
         &_title {
@@ -1119,6 +1199,14 @@ img {
                 &-main {
                     margin: 0;
                     font-size: 16px;
+                }
+            }
+            .text-common {
+                letter-spacing: 0.05em !important;
+                line-height: 1.6 !important;
+                width: 90%;
+                br {
+                    display: none;
                 }
             }
         }
@@ -1243,13 +1331,29 @@ img {
         }
         &-3 {
             width: 16.67vw;
-            right: 6.39vw;
-            top: -6.95vw;
+            right: 12.39vw;
+            top: -4.95vw;
         }
         &-4 {
             width: 39.89vw;
             left: 0;
             bottom: -18vw;
+        }
+    }
+    &-popup {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: none;
+        img {
+            width: 100%;
         }
     }
     @media screen and (max-width: 991px) {
@@ -1262,12 +1366,15 @@ img {
                     .num {
                         width: 26px;
                         height: 26px;
-                        font-size: 28px;
+                        font-size: 24px;
                         text-align: center;
                         line-height: 28px;
                         transform: translateY(1px);
                         margin: 0 5px;
                     }
+                }
+                &-big {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -1573,6 +1680,7 @@ img {
                 }
                 >li {
                     align-items: flex-start;
+                    margin-bottom: 5px;
                     p {
                         &.footer_inform {
                             &_title {
