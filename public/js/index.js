@@ -67,13 +67,15 @@ $(".map-popup").click(function (event) {
 function sendEmail(){
     Email.send({
         SecureToken: "8207c7d7-4a6c-4797-870d-d16ee71023ce",
-        To : "zhulixdesign@gmail.com, zhuli705098@gmail.com, a3202443aa@yahoo.com.tw, dtweryd@gmail.com",
+        // To : "zhulixdesign@gmail.com, zhuli705098@gmail.com, a3202443aa@yahoo.com.tw, dtweryd@gmail.com",
+        To : "yl301114@gmail.com",
         From : "walayydesign@gmail.com",
-        Subject : "航綻甜心預約賞屋",
+        Subject : "青禾居預約賞屋",
         Body : "姓名:" + document.getElementById("name").value
-                + "<br>電話:" + document.getElementById("phone").value
-                + "<br>需求房型:" + document.getElementById("type").value
-                + "<br>聯繫內容:" + document.getElementById("content").value
+            + "<br>聯絡電話:" + document.getElementById("phone").value
+            + "<br>LINE ID:" + document.getElementById("line").value
+            + "<br>居住地區:" + document.getElementById("area").value
+            + "<br>留言:" + document.getElementById("message").value
     }).then(
         message => alert("感謝您的來信！我們很快就會和您聯繫！"),
     );
