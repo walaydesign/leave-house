@@ -1857,6 +1857,15 @@ img {
         a {
             width: 100%;
             height: 55px;
+            img {
+                width: 35px;
+                transform: translateY(-3px);
+            }
+            span {
+                opacity: 1;
+                bottom: 2px;
+                font-size: 10px;
+            }
         }
     }
 }

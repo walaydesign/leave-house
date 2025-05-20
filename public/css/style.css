@@ -2132,5 +2132,15 @@ img {
     width: 100%;
     height: 55px;
   }
+  .sideBtn a img {
+    width: 35px;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  .sideBtn a span {
+    opacity: 1;
+    bottom: 2px;
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
