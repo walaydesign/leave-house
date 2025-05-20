@@ -730,8 +730,12 @@ img {
   .aesthetics .swiper-pagination {
     margin-bottom: 15px;
   }
+  .aesthetics .title-main {
+    font-size: 25px;
+  }
   .aesthetics .title-en {
     text-align: center;
+    font-size: 26px;
   }
 }
 

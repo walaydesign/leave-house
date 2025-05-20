@@ -647,8 +647,12 @@ img {
             margin-bottom: 15px;
         }
         .title {
+            &-main {
+                font-size: 25px;
+            }
             &-en {
                 text-align: center;
+                font-size: 26px;
             }
         }
     }
