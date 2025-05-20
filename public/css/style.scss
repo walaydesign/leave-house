@@ -1518,6 +1518,10 @@ img {
         border: 0;
         letter-spacing: 0.1em;
         font-weight: 700;
+        transition: $transition-common;
+        &:hover {
+            background-color: $primary-500;
+        }
     }
     &_leave {
         &-1 {

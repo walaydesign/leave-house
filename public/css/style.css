@@ -1744,6 +1744,12 @@ img {
   border: 0;
   letter-spacing: 0.1em;
   font-weight: 700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contact #submit:hover {
+  background-color: #91B84A;
 }
 
 .contact_leave-1 {
