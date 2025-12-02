@@ -458,28 +458,28 @@
                         <div class="title-deco_circle"></div>
                     </div>
                 </div>
-                <form class="contact_form" onsubmit="sendEmail(); reset(); return false">
+                <form class="contact_form" id="contact-form">
                     <div class="row">
                         <div class="col-md-6 mb-md-0 mb-lg-4 mb-3">
                             <div class="contact_input">
                                 <label for=""><span>姓</span><span>名</span></label>
-                                <input type="text" id="name" required>
+                                <input type="text" id="name" name="name" required>
                             </div>
                             <div class="contact_input">
                                 <label for=""><span>聯</span><span>絡</span><span>電</span><span>話</span></label>
-                                <input type="phone" id="phone" required>
+                                <input type="phone" id="phone" name="phone" required>
                             </div>
                             <div class="contact_input">
                                 <label for=""><span>LINE</span><span>ID</span></label>
-                                <input type="text" id="line">
+                                <input type="text" id="line" name="line">
                             </div>
                             <div class="contact_input">
                                 <label for=""><span>居</span><span>住</span><span>地</span></label>
-                                <input type="text" id="area" placeholder="縣市/鄉鎮">
+                                <input type="text" id="area" name="area" placeholder="縣市/鄉鎮">
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <textarea class="contact_textarea" placeholder="請輸入您的留言(選填)" name="" id="message" cols="30" rows="5"></textarea>
+                            <textarea class="contact_textarea" placeholder="請輸入您的留言(選填)" name="mesage" id="message" cols="30" rows="5"></textarea>
                         </div>
                     </div>
                     <input id="submit" type="submit" value="立即預約"/>
@@ -577,7 +577,28 @@
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/aos/aos.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js?v=20240527"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="./public/js/index.js"></script>
+    <script>
+      (function () {
+        emailjs.init("3j4kNvskrhLw3SIso");
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          emailjs.sendForm("service_eyyx1dp", "template_n9wht1v", this).then(
+            () => {
+              alert("感謝您的來信！我們很快就會和您聯繫！");
+              this.reset();
+            },
+            (error) => {
+              alert("寄送失敗，請稍後再試");
+            }
+          );
+        });
+    </script>
 </body>
 </html>
